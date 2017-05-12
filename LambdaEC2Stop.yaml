@@ -1,0 +1,6 @@
+Type: AWS::Lambda::Function
+Properties:
+  Functionname: ScheduleStartFunction
+  Handler:  index.handler
+  Runtime:  nodejs6.10
+  Code:  ./schedule_stop.js     

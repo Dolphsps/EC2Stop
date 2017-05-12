@@ -1,0 +1,10 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - aws cloudformation package --template-file LambdaEC2Stop.yaml --s3-bucket lonbergit-lambda
+                                   --output-template-file NewLambdaEC2Stop.yaml                                   
+artifacts:
+  type: zip
+  files:
+    - NewLambdaEC2Stop.yaml
